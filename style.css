@@ -1,0 +1,7 @@
+main {
+    display: flex;
+}
+section {
+    border: 1px solid black;
+    max-width: 30%;
+}
