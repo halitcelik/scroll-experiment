@@ -22,6 +22,14 @@
 }
 
 
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 main {
     display: flex;
 }
@@ -35,6 +43,40 @@ section {
     max-width: 30%;
     height: 102vh;
     padding: 0 calc(2rem + 6px) 0 2rem;
+    gap: 1rem;
+    transition: all 1s;
+}
+
+
+section.full {
+    max-width: 90%;
+    width: 90%;
+    height: 102vh;
+    padding: 0 calc(2rem + 6px) 0 2rem;
+}
+
+section.full img {
+    width: 19.625rem;
+}
+
+section.full + section,
+section.full + section + section {
+    width: 0;
+    height: 102vh;
+    padding: 0 calc(2rem + 6px) 0 2rem;
+    display: none;
+}
+
+.stick > section.full + section,
+.stick > section.full + section + section {
+    width: 0;
+    height: 102vh;
+    padding: 0 calc(2rem + 6px) 0 2rem;
+    display: none;
+}
+
+.stick > section.full {
+    max-width: 100%;
 }
 
 .stick > section {
@@ -44,8 +86,4 @@ section {
 
 section img {
     width: 100%;
-}
-
-.stick > section img {
-    width: calc(100% + 2px);
 }
