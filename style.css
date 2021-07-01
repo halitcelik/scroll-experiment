@@ -1,7 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: black white;   /* scroll thumb and track */
+}
+
+*::-webkit-scrollbar {
+  width: 4px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 0;       /* roundness of the scroll thumb */
+  border: 1px solid white;  /* creates padding around scroll thumb */
+}
+
+
 main {
     display: flex;
 }
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
 section {
-    border: 1px solid black;
     max-width: 30%;
+    height: 102vh;
+    padding: 0 calc(2rem + 6px) 0 2rem;
+}
+
+.stick > section {
+    padding-right: 2rem;
+    max-width: calc(30% - 2px);
+}
+
+section img {
+    width: 100%;
+}
+
+.stick > section img {
+    width: calc(100% + 2px);
 }
